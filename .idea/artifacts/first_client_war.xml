@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="first_client:war">
+    <output-path>$PROJECT_DIR$/first_client/target</output-path>
+    <root id="archive" name="first_client-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="first_client:war exploded" />
+    </root>
+  </artifact>
+</component>

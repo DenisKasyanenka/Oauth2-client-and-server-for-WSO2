@@ -1,0 +1,32 @@
+server:
+  contextPath : /second
+  port: 9090
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9763/oauth2/token
+      userAuthorizationUri: http://localhost:9763/oauth2/authorize
+      clientId: ubJCa6fXnpybfVlXURGxiyUSR24a
+      clientSecret: Ln31u4hUXcXpwUZwEsRhnGm29ioa
+      scope: openid
+      preEstablishedRedirectUri: http://localhost:9090/second/login
+      clientAuthenticationScheme: header
+      useCurrentUri: false
+      auto-approve-scopes: openid
+
+    resource:
+      userInfoUri: http://localhost:9763/oauth2/userinfo?schema=openid
+wso2SessionTerminateUrl: http://localhost:9763/commonauth?commonAuthLogout=true&type=oid&commonAuthCallerPath=http://localhost:9090/second/logout&relyingParty=localhost
+
+
+spring:
+  resources:
+    chain:
+      enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

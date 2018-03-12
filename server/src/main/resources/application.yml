@@ -1,0 +1,19 @@
+server:
+  port: 7070
+  contextPath: /
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+
+  signing-key: MaYzkSjmkzPC57L
+  encoding-strength: 256
+  security-realm: Realm
+  jwt:
+    client-id: auth_server_client_id
+    client-secret: auth_server_secret
+    grant-type: authorization_code
+    resource-ids: userInfo
+

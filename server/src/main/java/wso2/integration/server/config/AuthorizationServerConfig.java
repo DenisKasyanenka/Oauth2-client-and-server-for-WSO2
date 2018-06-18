@@ -62,6 +62,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		        .withClient(clientId)
 		        .secret(clientSecret)
 		        .authorizedGrantTypes(grantType)
+				.autoApprove()
 		        .scopes("openid")
 		        .resourceIds(resourceIds);
 	}

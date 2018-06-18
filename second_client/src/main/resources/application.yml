@@ -1,19 +1,21 @@
 server:
   contextPath : /second
   port: 9090
+  session:
+      cookie:
+        name: OAUTH2SESSION # This is to prevent cookie clash with other service as they run on the same host and context path
 
 security:
   oauth2:
     client:
       accessTokenUri: http://localhost:9763/oauth2/token
       userAuthorizationUri: http://localhost:9763/oauth2/authorize
-      clientId: ubJCa6fXnpybfVlXURGxiyUSR24a
-      clientSecret: Ln31u4hUXcXpwUZwEsRhnGm29ioa
+      clientId: Cc9o0iXH405CJdSEaG3VqcfAWksa
+      clientSecret: OQ4KheiWrJXJIdP_t0UkbFwMzsoa
       scope: openid
       preEstablishedRedirectUri: http://localhost:9090/second/login
       clientAuthenticationScheme: header
       useCurrentUri: false
-      auto-approve-scopes: openid
 
     resource:
       userInfoUri: http://localhost:9763/oauth2/userinfo?schema=openid
